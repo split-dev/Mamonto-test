@@ -13,11 +13,10 @@ export const login = (username, password, client_id, client_secret, grant_type) 
         client_secret,
         grant_type
 			});
-			dispatch(SetUser(response.data));
 			localStorage.setItem('token', response.data.access_token);
 			localStorage.setItem('User_id', response.data.user.id);
-      console.log(response.data.access_token);
 			localStorage.setItem('authorize', true);
+			dispatch(SetUser(response.data));
 		} catch (e) {
 			alert(e);
 		}
