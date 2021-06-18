@@ -19,6 +19,7 @@ function App() {
     setStatusAuth(false);
     localStorage.removeItem('token');
     localStorage.removeItem('authorize');
+
   }
 
   console.log(StatusAuth);
@@ -27,8 +28,7 @@ function App() {
     {
        isAuth || StatusAuth ? <Route path="/" component={() => (<CreateCollection logOut={logOut}/>)} exact/> : <Login toggleAuth={toggleAuth}/>
     }
-      
-      
+
     </div>
   );
 }
