@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Input(props) {
+function Input({className, placeholder, type, value, SetInput}) {
     return (
-        <input className={props.className} placeholder={props.placeholder} type={props.type} value={props.value} onChange={(event) => {
-            props.SetInput(event.target.value)
+        <input className={className} placeholder={placeholder} type={type} value={value} onChange={(event) => {
+            SetInput(event.target.value)
         }}/>
     )
 }
